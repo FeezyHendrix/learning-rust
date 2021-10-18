@@ -9,4 +9,8 @@ fn main() {
         "Intial block".to_owned()
     );
     print!("{:?}", &block);
+
+    let h = block.hash();
+
+    println!("{:?}", &h);
 }
