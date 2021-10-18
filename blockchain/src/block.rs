@@ -12,7 +12,12 @@ pub struct Block {
 
 impl Debug for Block {
   fn fmt(&self, f: &mut Formatter) -> fmt::Result {
-    write!(f, "Block")
+    write!(f, "Block[{}]: {} at: {} with: {}",
+    &self.index,
+    &hex::encode(&self.hash),
+    &self.timestamp,
+    &self.payload
+    )
   }
 }
 
