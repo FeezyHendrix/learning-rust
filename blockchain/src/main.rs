@@ -1,7 +1,7 @@
 use blockchainlib::*;
 
 fn main() {
-    let block = Block::new(
+    let mut block = Block::new(
         0,
         0,
         vec![0; 32],
@@ -13,4 +13,8 @@ fn main() {
     let h = block.hash();
 
     println!("{:?}", &h);
+
+    block.hash = h;
+    print!("{:?}", &block);
+
 }
